@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">polloFracmentoApi</string>
+
+
+    <string name="question">Pregunta</string>
+    <string name="pregunta">pregunta</string>
+    <string name="categoria">categoria</string>
+    <string name="dificultad">dificultad</string>
+
+
+</resources>
