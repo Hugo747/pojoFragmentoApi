@@ -11,4 +11,5 @@ public interface Api {
 
 @GET("api.php?amount=1&category=18&difficulty=medium&type=boolean")
 Call<RespuestaApi> getQuestion();
+
 }

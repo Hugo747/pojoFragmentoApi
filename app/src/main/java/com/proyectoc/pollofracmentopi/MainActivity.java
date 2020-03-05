@@ -13,28 +13,33 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView pregunta, categoria, dificultad;
+private String primeraCosa, segundaCosa;
+
+    //private TextView pregunta, categoria, dificultad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initializeViews();
+        //initializeFragment();
+
+       // initializeViews();
 
         Api api = RetrofitClient.getRetrofit().create(Api.class);
         Call<RespuestaApi> call = api.getQuestion();
 
         call.enqueue(new Callback<RespuestaApi>() {
-
-
             @Override
             public void onResponse(Call<RespuestaApi> call, Response<RespuestaApi> response) {
+               // categoria.setText(response.body().getResults().get(0).getQuestion());
+               // pregunta.setText(response.body().getResults().get(0).getQuestion());
+               // dificultad.setText(response.body().getResults().get(0).getQuestion());
 
-                categoria.setText(response.body().getResults().get(0).getQuestion());
-                pregunta.setText(response.body().getResults().get(0).getQuestion());
-                dificultad.setText(response.body().getResults().get(0).getQuestion());
+                primeraCosa=response.body().getResults().get(0).getQuestion();
+                segundaCosa= response.body().getResults().get(0).getQuestion();
 
+                initializeFragment(primeraCosa,segundaCosa);
             }
 
             @Override
@@ -52,14 +57,25 @@ public class MainActivity extends AppCompatActivity {
 
 
      }
+////////////////iniciar un fracmento
 
+     private void initializeFragment(String cosa1, String cosa2){
 
+        FirstFragment firstFragment = FirstFragment.newInstance("cosa1","pedrito");
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.framelayout,firstFragment,"FIRSFRAGMENT")
+                .commit();
+
+     }
+
+/*
     private void initializeViews(){
         pregunta = findViewById(R.id.pregunta1);
         categoria = findViewById(R.id.categoria);
         dificultad = findViewById(R.id.dificultad);
 
-    }
+    }*/
 
 
 

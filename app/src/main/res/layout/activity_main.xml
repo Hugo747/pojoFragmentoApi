@@ -7,50 +7,13 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/miImagenview"
-        android:layout_width="73dp"
-        android:layout_height="87dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515"
-        />
+   <FrameLayout
+       android:id="@+id/framelayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
 
+       />
 
-    <TextView
-        android:id="@+id/pregunta1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/question"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoria"
-        app:layout_constraintVertical_bias="0.168"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/categoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/categoria"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415"
-        tools:layout_editor_absoluteX="0dp" />
-
-
-    <TextView
-        android:id="@+id/dificultad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/dificultad"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341"
-        tools:layout_editor_absoluteX="0dp"
-
-        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

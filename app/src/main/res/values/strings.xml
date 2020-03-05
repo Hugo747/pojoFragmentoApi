@@ -7,5 +7,8 @@
     <string name="categoria">categoria</string>
     <string name="dificultad">dificultad</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="segundo_fragmento">segundo Fragmento</string>
+
 
 </resources>
